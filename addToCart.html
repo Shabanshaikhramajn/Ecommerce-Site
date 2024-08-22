@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript eCommerce</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Jost:wght@300;400;500;700&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="assets/addToCart-B0UWOuc6.js"></script>
+    <link rel="modulepreload" crossorigin href="assets/showToast-Dy92gSir.js">
+    <link rel="stylesheet" crossorigin href="assets/showToast-Bod2eNYD.css">
+  </head>
+  <body>
+    <!-- ========== Start Navbar ========== -->
+    <header class="section-navbar">
+      <section class="top_txt">
+        <div class="head container">
+          <div class="head_txt">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+          </div>
+          <div class="sing_in_up">
+            <a href="# ">SIGN IN</a>
+            <a href="# ">SIGN UP</a>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="index.html">
+            <img
+              src="data:image/png;base64,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"
+              alt="shaban eCommerce logo"
+              class="logo"
+              width="80%"
+              height="auto"
+            />
+          </a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home </a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">about</a>
+            </li>
+            <li class="nav-item">
+              <a href="products.html" class="nav-link">products</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="addToCart.html"
+                class="nav-link add-to-cart-button"
+                id="cartValue"
+              >
+                <i class="fa-solid fa-cart-shopping"></i> 0</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- ========== End Navbar ========== -->
+
+    <section class="addToCartElement">
+      <div class="container">
+        <section>
+          <div id="productCartContainer"></div>
+        </section>
+
+        <section class="productCartTotalElem">
+          <div class="productCartTotalElement">
+            <p>Selected Offer Summary</p>
+            <div class="productOrderTotal">
+              <div>
+                <p>Sub Total:</p>
+                <p class="productSubTotal">0</p>
+              </div>
+              <div>
+                <p>Tax:</p>
+                <p class="productTax">₹50</p>
+              </div>
+              <hr />
+              <div>
+                <p>Final Total:</p>
+                <p class="productFinalTotal">0</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Template for a product -->
+    <template id="productCartTemplate">
+      <div class="cards" id="cardValue">
+        <article class="information [ card ]">
+          <div>
+            <span class="category"></span>
+          </div>
+          <div class="imageContainer">
+            <img class="productImage" src="" alt="" />
+          </div>
+
+          <h2 class="productName"></h2>
+
+          <p class="productPrice"></p>
+
+          <div class="stockElement">
+            <button class="cartIncrement">+</button>
+            <p class="productQuantity" data-quantity="1">1</p>
+            <button class="cartDecrement">-</button>
+          </div>
+
+          <!-- <button class="add-to-cart-button">Add To Cart</button> -->
+          <button class="add-to-cart-button remove-to-cart-button">
+            Remove
+          </button>
+        </article>
+      </div>
+    </template>
+
+    <!-- ========== Start footer Section ========== -->
+    <footer class="section-footer">
+      <div class="footer-container container">
+        <div class="content_1">
+          <img src="data:image/png;base64,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" alt="logo" />
+          <p>
+            Welcome to shaban EcomStore, your ultimate destination for
+            cutting-edge gadgets!
+          </p>
+          <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+        </div>
+        <div class="content_2">
+          <h4>SHOPPING</h4>
+          <a href="#">Computer Store</a>
+          <a href="#">Laptop Store</a>
+          <a href="#">Accessories</a>
+          <a href="#">Sales & Discount</a>
+        </div>
+        <div class="content_3">
+          <h4>Experience</h4>
+          <a href="./contact.html">Contact Us</a>
+          <a href="" target="_blank">Payment Method</a>
+          <a href="" target="_blank">Delivery</a>
+          <a href="" target="_blank">Return and Exchange</a>
+        </div>
+        <div class="content_4">
+          <h4>NEWSLETTER</h4>
+          <p>Be the first to know about new<br />arrivals, sales & promos!</p>
+          <div class="f-mail">
+            <input type="email" placeholder="Your Email" />
+            <i class="bx bx-envelope"></i>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <div class="f-design">
+        <div class="f-design-txt">
+          <p>Design and Code by shaban Technical</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ========== End footer Section ========== -->
+
+  </body>
+</html>
